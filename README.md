@@ -35,14 +35,22 @@
 ## :six: 그 외 트러블 슈팅
 
 <details>
-  <summary><b>요약</b></summary>
-  <div markdown="1">
-    ~~~java
-    public static void main() {
-      @Overriding
-      public String list(){}
-    }
-    ~~~
-    
-  </div>
+<summary><b>요약</b></summary>
+  java 코드를 정리해보았습니다.
+  ```java
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println("Hello, Honeymon");
+  }
+}
+```
+  
 </details>
+
+```java
+public class BootSpringBootApplication {
+  public static void main(String[] args) {
+    System.out.println("Hello, Honeymon");
+  }
+}
+```
