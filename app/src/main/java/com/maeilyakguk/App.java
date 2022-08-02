@@ -12,7 +12,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 //따라서 Servlet API로 만든 서블릿, 필터, 리스너가 동작하지 않는다. 
 //Servlet API로 만든 컴포넌트를 스프링부트에서 실행하고 싶다면 다음 애노테이션으로 
 //그들 클래스가 있는 패키지를 지정하라!
+
 @ServletComponentScan("com.maeilyakguk.web")
+
 @EnableTransactionManagement // 애노테이션으로 트랜잭션을 제어할 수 있게 한다.
 @SpringBootApplication
 public class App {
