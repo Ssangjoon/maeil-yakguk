@@ -1,6 +1,9 @@
 *{ margin:0; padding:0; word-break:break-all;}
 html {height:100%;}
-body {width:100%;}
+body {
+    width:1280px;
+    height: 720px;
+}
 
 a {color:#333; text-decoration:none;}
 a:link, a:visited, a:active {color:#333;}

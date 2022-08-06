@@ -9,25 +9,41 @@
 </head>
 <body>
 	<div id="loginBox">
-		<div id="loginInnerBox">
-			<div class="loginTitle t1">Login Page</div>
-			<div class="loginTitle t2">Login To Member</div>
-			<div class="loginTitle t3">Enter your email and password below</div>
+		<div id="loginInnerBox" >
+			<div>
+				<div class="loginTitle t1">Login Page</div>
+				<div class="loginTitle t2">Login To Member</div>
+				<div class="loginTitle t3">Enter your email and password below</div>
+			</div>
+
 			<form action="">
-				<div class="loginInput">
-					<input type = "email" placeholder="이메일을 입력해주세요" name = "email" class="">
-					<input type="password" placeholder="비밀번호를 입력해주세요" name="password" class="">
+
+				<div class="loginInput" >
+					<div>
+						<label for="email">EMAIl</label>
+						<input type = "email" placeholder="이메일을 입력해주세요" name = "email" id="email">
+					</div>
+					<div>
+						<label for="password">PASSWORD</label>
+						<input type="password" placeholder="비밀번호를 입력해주세요" name="password" id="password">
+					</div>
 					<input type="submit" value="로그인">
 				</div>
-				<div >
-					<input type="checkbox" id="memory">
-					<label for="memory">아이디 기억</label>
+
+				<div id="checkbox-container">
+					<div>
+						<input type="checkbox" id="memory">
+						<label for="memory">아이디 기억</label>
+					</div>
 				</div>
+
 			</form>
-			<div>
+
+			<div id="link" >
 				<a href="">아이디/비밀번호 찾기 </a>
 				<a href="">회원가입</a>
 			</div>
+
 		</div>
 	</div>
 </body>
