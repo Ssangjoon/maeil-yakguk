@@ -20,7 +20,7 @@
 
 				<div class="loginInput" >
 					<div>
-						<label for="email">EMAIl</label>
+						<label for="email">EMAIL</label>
 						<input type = "email" placeholder="이메일을 입력해주세요" name = "email" id="email">
 					</div>
 					<div>
