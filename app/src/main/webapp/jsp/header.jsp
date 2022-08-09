@@ -5,7 +5,10 @@
     background-color: darkkhaki;
     width: 100vw;
     height: 100px;
-    text-align: center;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
 }
 </style>
 

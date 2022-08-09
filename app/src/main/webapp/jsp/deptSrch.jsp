@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>약국 찾기</title>
-    <link href="/app/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="/app/css/common.css">
+    <link rel="stylesheet" href="/app/css/deptSrch.css">
 </head>
 <body>
 <div class="container">
@@ -17,6 +18,36 @@
         <a href="">병원</a>
         <a href="">약국</a>
         <a href="">응급실</a>
+    </div>
+
+    <div id="btn-wrap">
+        <button id="region-srch-btn" type="button">지역으로 검색</button>
+        <button id="srch-btn" type="button">🔍</button>
+    </div>
+
+    <div id="srch-bar">
+        <div>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+            <button class="city"></button>
+        </div>
+        <div>
+
+        </div>
     </div>
 </div>
 
