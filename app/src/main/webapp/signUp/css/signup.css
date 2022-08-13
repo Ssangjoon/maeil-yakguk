@@ -6,7 +6,7 @@ body {
     background-color: white;
     position: absolute;
     width: 380px;
-    height: 582px;
+    height: 690px;
     top: 50%;
     left: 50%; 
     transform: translate(-50%,-50%);
@@ -16,20 +16,41 @@ body {
     height: 96%;
     width: 80%;
     margin: 0 auto ;
-    display: flex;
-    flex-direction: column;
-    
 }
 #signupInnerBox label{
     display: block;
 }
 #signupInnerBox form{
-    height: 82%;
+    height: 70%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 #signupInnerBox input,button {
     width: 100%;
+    height: 30px;
+}
+#signupInnerBox input{
+    border-color: rgb(232, 235, 238);
+    border-width: 1px;
+    border-radius: 5px;
+}
+#signupInnerBox #postLabel, #find-Post-btn {
+    display: inline-block;
+}
+#signupInnerBox  #find-Post-btn{
+    width: 100px;
+}
+.userAddress div:first-child{
+    display: flex;
+    justify-content: space-between;
+}
+#signupInnerBox #apply-btn {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(138, 170, 229);
+}
+.lineInter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
