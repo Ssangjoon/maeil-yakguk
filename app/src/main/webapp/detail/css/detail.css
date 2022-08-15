@@ -1,1 +1,12 @@
 @import url(../../css/base.css);
+
+.test {
+    background-color: darkkhaki;
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+}
+
+#detailBox {
+    width: 900px;
+}
