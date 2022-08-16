@@ -158,41 +158,43 @@
                 </section>
 
                 <section id="hospital-detail">
-                    <div class="">
-                        <div><i class="fa-solid fa-house-medical"></i></div>
-                        <div>소화기내과, 가정의학과</div>
+                    <div class="detail-common detail-top">
+                        <div class="detail-icon icon-house"><i class="fa-solid fa-house-medical"></i></div>
+                        <div class="detail-text">소화기내과, 가정의학과</div>
                     </div>
-                    <div class="">
-                        <div><i class="fa-solid fa-location-dot"></i></div>
-                        <div>경기 하남시 미사강변동로84번길 39에...</div>
+                    <div class="detail-common">
+                        <div class="detail-icon icon-location"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="detail-text">경기 하남시 미사강변동로84번길 39에...</div>
                     </div>
-                    <div class="">
-                        <div><i class="fa-solid fa-phone"></i></div>
-                        <div>031-796-8288</div>
+                    <div class="detail-common">
+                        <div class="detail-icon icon-phone"><i class="fa-solid fa-phone"></i></div>
+                        <div class="detail-text">031-796-8288</div>
                     </div>
-                    <div class="">
-                        <div><i class="fa-solid fa-circle-info"></i></div>
-                        <div>
+                    <div class="detail-common">
+                        <div class="detail-icon icon-page"><i class="fa-solid fa-circle-info"></i></div>
+                        <div class="detail-text">
                             <a href="http://365plusclinic.co.kr/">병원 홈페이지 가기</a>
                         </div>
                     </div>
                 </section>
 
-                <section id="share">
-                    <button class="" type="button"></button>
-                </section>
+                <section id="btn-container">
+                    <section id="share">
+                        <button class="share-btn btn-common" type="button">공유하기</button>
+                    </section>
 
-                <section id="direction">
-                    <button class="" type="button"></button>
+                    <section id="direction">
+                        <button class="direction-btn btn-common" type="button">길찾기</button>
+                    </section>
                 </section>
                 
                 <section id="hospital-hours">
-                    <div class="">
-                        <div class="">오늘</div>
+                    <div class="today-hours hours-common">
+                        <div class="hours-title">오늘</div>
                         <div class="">10:00 ~ 19:00</div>
                     </div>
-                    <div class="">
-                        <div class="">점심시간</div>
+                    <div class="lunch-hours hours-common">
+                        <div class="hours-title">점심시간</div>
                         <div class="">12:00 ~ 13:00</div>
                     </div>
                 </section>
