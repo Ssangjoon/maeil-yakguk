@@ -1,7 +1,30 @@
 @import url(../../css/base.css);
 
 #detailBox {
-    width: 90vw;
+    width: 100vw;
     margin-top: 50px;
     display: flex;
+    justify-content: center;
+}
+
+#detail-container {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*****************
+    메인 콘텐츠
+*****************/
+#main-content {
+    width: 42vw;
+}
+
+/*****************
+    사이드바
+*****************/
+#side-bar {
+    width: 33vw;
+    margin-left: 5vw;
 }

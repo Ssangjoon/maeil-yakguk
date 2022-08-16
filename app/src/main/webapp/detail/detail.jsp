@@ -14,13 +14,13 @@
     </div>
 
     <div id="detailBox">
-        <section>
-            <main>
-                <section class="main-img">
+        <section id="detail-container">
+            <main id="main-content">
+                <section id="main-img">
                     <img src="img/hospital.jpg" alt="메인 이미지">
                 </section>
 
-                <section class="rating">
+                <section id="rating">
                     <div class="star-container">
                         <div><i class="fa-solid fa-star"></i></div>
                         <div><i class="fa-solid fa-star"></i></div>
@@ -31,7 +31,7 @@
                     <div>5.0</div>
                 </section>
 
-                <nav class="nav-hospital">
+                <nav id="nav-hospital">
                     <div>
                         <div class="nav-introduction">소개</div>
                         <div class="nav-hours">진료시간</div>
@@ -40,7 +40,7 @@
                     </div>
                 </nav>
 
-                <section class="introduction">
+                <section id="introduction">
                     <div>병원소개</div>
                     <div>
                         우리 병원은 1972년 중부권 최초의 교육병원으로 출발하여 그동안 비약적인 발전을 거듭해 왔으며, 시시각각 변화하는 의료 환경에 적응하기 위하여 우수한 의료진과 첨단 의료 장비를 갖추고 사랑과 정성으로 환자 진료에 힘쓰며 변화와 개혁을 추구해왔습니다. 
@@ -49,7 +49,7 @@
                     </div>
                 </section>
                 
-                <section class="hours">
+                <section id="hours">
                     <div>진료시간</div>
                     <div class="hours-container">
                         <div>
@@ -91,7 +91,7 @@
                     </div>
                 </section>
                 
-                <section class="location">
+                <section id="location">
                     <div>위치</div>
                     <div>경기 하남시 미사강변동로84번길 39 에코타워 2~5층</div>
                     <div>
@@ -99,7 +99,7 @@
                     </div>
                 </section>
                 
-                <section class="review">
+                <section id="review">
                     <div>리뷰</div>
                     <div>
                         <div>
@@ -127,17 +127,19 @@
                     </div>
 
                 </section>
-
             </main>
 
-            <aside>
-                <section class="open-close">
+
+            <aside id="side-bar">
+                <section id="open-close">
                     진료중
                 </section>
-                <section class="hospital-name">
+
+                <section id="hospital-name">
                     <h1>365 플러스 내과의원</h1>
                 </section>
-                <section class="hospital-detail">
+
+                <section id="hospital-detail">
                     <div class="">
                         <div><i class="fa-solid fa-house-medical"></i></div>
                         <div>소화기내과, 가정의학과</div>
@@ -157,13 +159,16 @@
                         </div>
                     </div>
                 </section>
-                <section class="share">
+
+                <section id="share">
                     <button class="" type="button"></button>
                 </section>
-                <section class="direction">
+
+                <section id="direction">
                     <button class="" type="button"></button>
                 </section>
-                <section class="hospital-hours">
+                
+                <section id="hospital-hours">
                     <div class="">
                         <div class="">오늘</div>
                         <div class="">10:00 ~ 19:00</div>
