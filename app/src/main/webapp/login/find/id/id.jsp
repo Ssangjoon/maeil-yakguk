@@ -15,5 +15,6 @@
     <input type="text" placeholder="이름을 입력해주세요">
     <input type="tel" placeholder="전화번호를 입력해주세요">
     <button>아이디 찾기</button>
+    <a href="../../login.jsp">취소</a>
 </body>
 </html>
