@@ -40,8 +40,8 @@
 			</form>
 
 			<div id="link" >
-				<a href="">아이디/비밀번호 찾기 </a>
-				<a href="">회원가입</a>
+				<a href="./find.jsp">아이디/비밀번호 찾기 </a>
+				<a href="../signup/signUp.jsp">회원가입</a>
 			</div>
 
 		</div>
