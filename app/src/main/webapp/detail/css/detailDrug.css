@@ -1,0 +1,237 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: NanumSquareRound;
+}
+
+button {
+    all: unset;
+}
+
+#detail-box {
+    width: 100vw;
+    overflow-x: hidden;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#detail-container {
+    width: 65vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*****************
+    메인 콘텐츠
+*****************/
+#main-content {
+    width: 35vw;
+}
+
+
+/****메인 이미지****/
+#img-container {
+    width: 35vw;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 15px;
+}
+
+
+/****네비게이션 바****/
+#nav-hospital {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.nav-common {
+    width: calc( 100% / 4 );
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 10px 0;
+    /* border-bottom: 1px solid gray; */
+}
+
+.nav-hours {
+    border-bottom: 3px solid gray;
+}
+
+
+.nav-title {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.nav-section {
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.content {
+    padding-left: 10px;
+}
+
+/****네비게이션_진료시간****/
+
+.week {
+    display: flex;
+    padding: 12px 0;
+}
+
+.day {
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.breaktime {
+    position: relative;
+    right: 15px;
+}
+
+/****네비게이션_위치****/
+.map-temp {
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*****************
+    사이드바
+*****************/
+#side-bar {
+    width: 25vw;
+    margin-left: 5vw;
+}
+
+#open-close {
+    font-weight: bold;
+    color: rgba(228, 134, 60, 1);
+    font-size: 20px;
+}
+
+#hospital-name h1 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/****사이드바 박스****/
+#hospital-detail {
+    padding: 0 15px;
+    border: 3px solid rgb(197, 197, 197);
+    height: 105px;
+    border-radius: 10px;
+}
+
+.detail-common {
+    display: flex;
+    margin: 15px 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.detail-icon {
+    color: rgb(80, 77, 77);
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+}
+
+.icon-location {
+    font-size: 30px;
+}
+
+.icon-phone {
+    font-size: 27px;
+}
+
+.detail-text {
+    font-size: 20px;
+}
+
+/****사이드바 버튼****/
+#btn-container {
+    margin-top: 15px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#share {
+    width: 35%;
+    margin-right: 2%;
+}
+
+#direction {
+    width: 63%;
+}
+
+.btn-common {
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.share-btn {
+    border: 3px solid rgb(197, 197, 197);
+    border-radius: 15px;
+    height: 60px;
+    line-height: 60px;
+    color: rgba(83, 83, 83, 1);
+}
+
+.direction-btn {
+    background-color: rgba(138, 170, 229, 1);
+    border-radius: 15px;
+    height: 64px;
+    line-height: 64px;
+    color: #ffffff;
+}
+
+#hospital-hours {
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(230, 242, 254, 1);
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.hours-common {
+    padding: 20px;
+}
+
+.today-hours {
+    margin-right: 15%;
+}
+
+.hours-title {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
