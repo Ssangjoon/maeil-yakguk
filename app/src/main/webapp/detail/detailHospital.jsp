@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../css/base.css">
     <!-- font -->
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+<!-- jquery -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -201,6 +204,20 @@
             </aside>
         </section>
     </div>
+
+    <script>
+        $('.sort-btn').on("click", function() {
+            alert('정렬버튼 클릭');
+        });
+
+        $('.share-btn').on("click", function() {
+            alert('공유버튼 클릭');
+        });
+
+        $('.direction-btn').on("click", function() {
+            alert('길찾기버튼 클릭');
+        });
+    </script>
 
 <!-- icons -->
 <script src="https://kit.fontawesome.com/22437c0385.js" crossorigin="anonymous"></script>

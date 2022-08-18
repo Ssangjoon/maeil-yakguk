@@ -145,6 +145,7 @@ button {
 .sort-btn {
     width: 60px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .review-container {
@@ -287,6 +288,7 @@ button {
     width: 100%;
     font-size: 22px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .share-btn {
@@ -305,6 +307,7 @@ button {
     color: #ffffff;
 }
 
+/****사이드바 운영시간****/
 #hospital-hours {
     display: flex;
     margin-top: 15px;
