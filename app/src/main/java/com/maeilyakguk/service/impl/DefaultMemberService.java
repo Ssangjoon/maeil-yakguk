@@ -4,19 +4,19 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-import com.maeilyakguk.dao.UserDao;
-import com.maeilyakguk.domain.User2;
-import com.maeilyakguk.service.UserService;
+import com.maeilyakguk.dao.MemberDao;
+import com.maeilyakguk.domain.Member;
+import com.maeilyakguk.service.MemberService;
 
 @Service
-public class DefaultUserService implements UserService{
+public class DefaultMemberService implements MemberService{
 
   @Autowired
-  UserDao userDao;
+  MemberDao memberDao;
   JavaMailSender mailSender;
 
   @Override
-  public List<User2> list() {
-    return userDao.findAll();
+  public List<Member> list() {
+    return memberDao.findAll();
   }
 }

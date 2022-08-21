@@ -6,7 +6,7 @@ import lombok.experimental.Accessors;
 
 @Data
 @Accessors
-public class User2 {
+public class Member {
   //  Integer id;
   int no;
   String tel;

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import com.maeilyakguk.App;
-import com.maeilyakguk.service.UserService;
+import com.maeilyakguk.service.MemberService;
 
 @Controller
 @RequestMapping("/user/")
@@ -15,7 +15,7 @@ public class UserController {
   //log를 출력하는 도구 준비
   private static final Logger log = LogManager.getLogger(App.class);
   @Autowired
-  UserService userService;
+  MemberService userService;
 
   @RequestMapping(value = "list", method = RequestMethod.GET)
   public Object userberList() {
