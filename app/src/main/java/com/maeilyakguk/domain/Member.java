@@ -7,7 +7,6 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors
 public class Member {
-  //  Integer id;
   int no;
   String tel;
   String name;
