@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maeilyakguk.dao.MemberDao">
+
+<!-- 테이블의 컬럼과 객체필드를 연결한다. -->
+  <resultMap type="Member" id="memberMap">
+    <id column="membno" property="no" />
+    <result column="tel" property="tel" />
+    <result column="name" property="name" />
+    <result column="email" property="email" />
+    <result column="pwd" property="password" />
+    <result column="postno" property="postNo" />
+    <result column="roadadd" property="roadNameAddress" />
+    <result column="baseadd" property="baseAddress" />
+    <result column="address" property="address" />
+    <result column="cdt" property="createDate" />
+  </resultMap>
+
+   <insert id="insert" parameterType="member" keyProperty="no" keyColumn="membno" useGeneratedKeys="true">
+      insert into 
+        member
+        (tel, name, email, pwd, postno, baseadd, roadadd, address)
+    values
+      (#{tel}, #{name}, #{email}, #{password}, #{postNo}, #{baseAddress}, #{roadNameAddress}, #{address})
+  </insert>
+</mapper>

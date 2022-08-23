@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>아이디 찾기</title>
 <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="./css/find.css">
+<link rel="stylesheet" href="/app/login/css/find.css">
 </head>
 <body>
   <div id="findBox">
@@ -25,9 +25,9 @@
             <a href="./login.jsp">취소</a>
         </div>
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-            <input type="email" placeholder="메일을 입력해주세요" id="jemail">
+            <input type="email" placeholder="메일을 입력해주세요" >
             <input type="tel" placeholder="전화번호를 입력해주세요">
-            <button>비밀번호 찾기</button>
+            <button id="jemail">비밀번호 찾기</button>
             <a href="./login.jsp">취소</a>
         </div>
       </div>
@@ -36,7 +36,9 @@
 <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script>
-  $("#jemail").show();
+  document.querySelector("#jemail").addEventListener("click",function(e){
+    console.log(e, e.altKey)
+  })
 </script>
 </body>
 </html>
