@@ -18,3 +18,4 @@ public class Member {
   String address;
   Date createDate;
 }
+

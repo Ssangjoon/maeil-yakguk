@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>아이디 찾기</title>
 <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="./css/find.css">
+<link rel="stylesheet" href="/app/login/css/find.css">
 </head>
 <body>
   <div id="findBox">

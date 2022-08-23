@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인 페이지</title>
-<link rel="stylesheet" href="./css/login.css">
+<link rel="stylesheet" href="/app/login/css/login.css">
 </head>
 <body>
 	<div id="loginBox">
@@ -40,8 +40,8 @@
 			</form>
 
 			<div id="link" >
-				<a href="./find.jsp">아이디/비밀번호 찾기 </a>
-				<a href="../signup/signUp.jsp">회원가입</a>
+				<a href="/app/login/find.jsp">아이디/비밀번호 찾기 </a>
+				<a href="/app/signup/signUp.jsp">회원가입</a>
 			</div>
 		</div>
 	</div>

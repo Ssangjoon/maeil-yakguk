@@ -1,6 +1,5 @@
 package com.maeilyakguk.service.impl;
 
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -16,7 +15,9 @@ public class DefaultMemberService implements MemberService{
   JavaMailSender mailSender;
 
   @Override
-  public List<Member> list() {
-    return memberDao.findAll();
+  public int add(Member member) {
+    memberDao.insert(member);
+    return 1;
   }
+
 }
