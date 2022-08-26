@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입 페이지</title>
-<link rel="stylesheet" href="./css/signup.css">
+<link rel="stylesheet" href="/app/signup/css/signup.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
 </head>
 <body>
     <div id="signupBox">

@@ -10,4 +10,6 @@ import com.maeilyakguk.domain.Member;
 public interface MemberDao {
 
   int insert(Member member);
+
+  Member findByEmailAndPassword(Member member);
 }

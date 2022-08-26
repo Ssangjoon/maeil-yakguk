@@ -1,49 +1,57 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+		<% String email=(String) request.getAttribute("email"); if(email==null) { email="" ; } %>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>로그인 페이지</title>
-<link rel="stylesheet" href="/app/login/css/login.css">
-</head>
-<body>
-	<div id="loginBox">
-		<div id="loginInnerBox" >
-			<div>
-				<div class="loginTitle t1">Login Page</div>
-				<div class="loginTitle t2">Login To Member</div>
-				<div class="loginTitle t3">Enter your email and password below</div>
-			</div>
+			<!DOCTYPE html>
+			<html>
 
-			<form action="">
+			<head>
+				<meta charset="UTF-8">
+				<title>로그인 페이지</title>
+				<link rel="stylesheet" href="/app/login/css/login.css">
+				<link rel="stylesheet" type="text/css"
+					href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+			</head>
 
-				<div class="loginInput" >
-					<div>
-						<label for="email">EMAIL</label>
-						<input type = "email" placeholder="이메일을 입력해주세요" name = "email" id="email">
+			<body>
+				<div id="loginBox">
+					<div id="loginInnerBox">
+						<div>
+							<div class="loginTitle t1">Login Page</div>
+							<div class="loginTitle t2">Login To Member</div>
+							<div class="loginTitle t3">Enter your email and password below</div>
+						</div>
+
+						<form action="/app/member/loginCheck" method="post" name="login-form">
+							<div class="loginInput">
+								<div>
+									<label for="email">EMAIL</label>
+									<input type="email" placeholder="이메일을 입력해주세요" name="email" id="email"
+										value="<%=email%>" required>
+								</div>
+								<div>
+									<label for="password">PASSWORD</label>
+									<input type="password" placeholder="비밀번호를 입력해주세요" name="password" id="password"
+										required>
+								</div>
+								<input type="submit" value="로그인" onclick="login()">
+							</div>
+
+							<div id="checkbox-container">
+								<div>
+									<input type="checkbox" id="memory" name="remember">
+									<label for="memory">아이디 기억</label>
+								</div>
+							</div>
+						</form>
+						<div id="link">
+							<a href="/app/member/find">아이디/비밀번호 찾기 </a>
+							<a href="/app/member/join">회원가입</a>
+						</div>
 					</div>
-					<div>
-						<label for="password">PASSWORD</label>
-						<input type="password" placeholder="비밀번호를 입력해주세요" name="password" id="password">
-					</div>
-					<input type="submit" value="로그인">
 				</div>
+				<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+				<script src="/app/login/js/login.js"></script>
+			</body>
 
-				<div id="checkbox-container">
-					<div>
-						<input type="checkbox" id="memory">
-						<label for="memory">아이디 기억</label>
-					</div>
-				</div>
-
-			</form>
-
-			<div id="link" >
-				<a href="/app/login/find.jsp">아이디/비밀번호 찾기 </a>
-				<a href="/app/signup/signUp.jsp">회원가입</a>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+			</html>

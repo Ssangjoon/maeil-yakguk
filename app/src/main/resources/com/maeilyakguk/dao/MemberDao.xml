@@ -25,4 +25,9 @@
     values
       (#{tel}, #{name}, #{email}, #{password}, #{postNo}, #{baseAddress}, #{roadNameAddress}, #{address})
   </insert>
+  <select id="findByEmailAndPassword" resultMap="memberMap" parameterType="member">
+		  SELECT membno, tel, name, email, pwd, postno, baseadd, roadadd, address, cdt
+			 FROM member
+			WHERE email=#{email} and pwd=#{password}
+  </select>
 </mapper>
