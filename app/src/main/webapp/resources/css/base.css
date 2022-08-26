@@ -7,7 +7,7 @@ body {
 
 a {color:#333; text-decoration:none;}
 a:link, a:visited, a:active {color:#333;}
-a:focus, a:hover{ text-decoration:none; font-weight:bold;}
+a:focus, a:hover { font-weight:bold; color:#333; text-decoration:none;}
 
 h1, h2, h3, h4, h5, h6, address{ font-style:normal; font-size:13px; font-weight:normal;}
 li, dt, dd{list-style:none;}
