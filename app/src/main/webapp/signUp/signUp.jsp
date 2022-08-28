@@ -30,7 +30,7 @@
                 <div class="userAddress">
                     <div>
                         <label for="find-Post-btn" id="postLabel">우편번호</label>
-                        <input type="button" id="find-Post-btn"  value="우편번호 찾기">
+                        <input type="button" id="find-Post-btn"  value="우편번호 찾기" onclick="searchAddress()">
                     </div>
                         <input type="text" placeholder="우편번호" name="postNo" id="postNo" required>
                         <input type="text" placeholder="도로명주소" name="roadNameAddress" required>
@@ -45,6 +45,7 @@
         </div>
     </div>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="/app/signup/signup.js"></script>
 </body>
 </html>
