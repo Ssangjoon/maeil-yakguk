@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement // 애노테이션으로 트랜잭션을 제어할 수 있게 한다.
 @SpringBootApplication
 public class App {
+
   //log를 출력하는 도구 준비
   private static final Logger log = LogManager.getLogger(App.class);
 

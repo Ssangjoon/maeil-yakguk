@@ -22,7 +22,7 @@
     <div id="wrapper">
 
         <div id="btn-wrap">
-            <button id="region-srch-btn" type="button">지역으로 검색해 볼게요.</button>
+            <button id="region-srch-btn" type="button">지역으로 검색해 보세요.</button>
         </div>
 
         <div id="srch-bar">
@@ -117,6 +117,7 @@
 <script>
 "use strict"
 
+// 지역 선택 창 열기
 $("#region-srch-btn").on("click", function () {
     console.log("hehe");
     $("#srch-bar").css('display', 'flex');
