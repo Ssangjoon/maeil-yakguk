@@ -16,6 +16,7 @@ public class Member {
   String roadNameAddress;
   String baseAddress;
   String address;
+  String remember;
   Date createDate;
 }
 

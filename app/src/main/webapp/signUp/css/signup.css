@@ -1,4 +1,4 @@
-@import url(../../css/base.css);
+@import url(/app/resources/css/base.css);
 body {
     background-color: rgb(138, 170, 229);
 }
@@ -6,7 +6,7 @@ body {
     background-color: white;
     position: absolute;
     width: 380px;
-    height: 690px;
+    height: 635px;
     top: 50%;
     left: 50%; 
     transform: translate(-50%,-50%);

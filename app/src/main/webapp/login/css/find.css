@@ -1,12 +1,12 @@
-@import url(../../css/base.css);
+@import url(/app/resources/css/base.css);
 body {
     background-color: rgb(138, 170, 229);
 }
 #findBox {
     background-color: white;
     position: absolute;
-    width: 652px;
-    height: 189px;
+    width: 715px;
+    height: 210px;
     top: 50%;
     left: 50%; 
     transform: translate(-50%,-50%);
@@ -16,4 +16,22 @@ body {
     height: 90%;
     width: 80%;
     margin: 61px auto 0;
+}
+
+#findInnerBox input,
+#findInnerBox button{
+    border-radius: 5px;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+#findInnerBox input{
+    width: 200px;
+}
+
+#findInnerBox .find-btn{
+    width: 111px;
+}
+
+#findInnerBox .input-box{
+    margin-top: 10px;
 }

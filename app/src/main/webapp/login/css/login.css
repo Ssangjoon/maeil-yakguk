@@ -1,4 +1,4 @@
-@import url(../../css/base.css);
+@import url(/app/resources/css/base.css);
 body {
     background-color: rgb(138, 170, 229);
 }
@@ -15,7 +15,7 @@ body {
 #loginInnerBox {
     height: 90%;
     width: 80%;
-    margin: 61px auto 0;
+    margin: 78px auto 0;
 }
 /* title */
 #loginInnerBox .loginTitle{
