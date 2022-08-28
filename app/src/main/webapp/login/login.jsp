@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-		<% String email=(String) request.getAttribute("email"); if(email==null) { email="" ; } %>
 
 			<!DOCTYPE html>
 			<html>
@@ -26,8 +25,8 @@
 							<div class="loginInput">
 								<div>
 									<label for="email">EMAIL</label>
-									<input type="email" placeholder="이메일을 입력해주세요" name="email" id="email"
-										value="<%=email%>" required>
+									<input required type="email" placeholder="이메일을 입력해주세요" name="email" id="email"
+										value=${email} >
 								</div>
 								<div>
 									<label for="password">PASSWORD</label>

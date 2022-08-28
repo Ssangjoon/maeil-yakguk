@@ -65,9 +65,15 @@ public class MemberController {
 
   @RequestMapping(value = "signup", method = RequestMethod.POST)
   public Object signUp(Member member) throws Exception {
+    log.info("회원가입 체크");
+    String email = member.getEmail();
+    Member signupInfo = memberService.get(email);
+    if (signupInfo != null) {
+      return "redirect:/member/join?rt=1";
+    }
     memberService.add(member);
     log.info("가입");
-    return "/login/login.jsp";
+    return "/login/login.jsp?rt=2";
   }
 
   @RequestMapping(value = "find", method = RequestMethod.GET)
@@ -79,7 +85,7 @@ public class MemberController {
   @RequestMapping(value = "join", method = RequestMethod.GET)
   public Object join() {
     log.info("회원가입 페이지");
-    return "/signup/signUp.jsp";
+    return "/signup/signup.jsp";
   }
 
   @RequestMapping(value = "signout", method = RequestMethod.GET)

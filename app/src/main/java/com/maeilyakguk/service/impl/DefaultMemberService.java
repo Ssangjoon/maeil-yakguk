@@ -16,13 +16,16 @@ public class DefaultMemberService implements MemberService{
 
   @Override
   public int add(Member member) {
-    memberDao.insert(member);
-    return 1;
+    return memberDao.insert(member);
   }
 
   @Override
   public Member get(Member member) {
     return memberDao.findByEmailAndPassword(member);
+  }
+  @Override
+  public Member get(String email) {
+    return memberDao.findByEmail(email);
   }
 
 }
