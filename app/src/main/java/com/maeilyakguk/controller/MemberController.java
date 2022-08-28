@@ -40,13 +40,13 @@ public class MemberController {
   }
 
   @RequestMapping(value = "loginCheck", method = RequestMethod.POST)
-  public Object loginCheck(Member member, HttpServletRequest request, HttpServletResponse response, Model model) {
+  public Object loginCheck(Member member, HttpServletRequest request, HttpServletResponse response, Model model, HttpSession session) {
     log.info("로그인 체크");
     String email = request.getParameter("email");
     String remember = request.getParameter("remember");
     Cookie cookie = new Cookie("email", email);
     if(remember != null) {      
-      log.info("쿠키 저장");
+      log.info("쿠키에 이메일 저장");
       response.addCookie(cookie);
     }else if (remember == null) {            
       log.info("쿠키 삭제");
@@ -59,6 +59,9 @@ public class MemberController {
       log.info("로그인 실패");
       return "redirect:/member/login?rt=1";
     }
+    // 로그인이 성공하면,
+    // 다른 요청을 처리할 때 로그인 회원의 정보를 사용할 있도록 세션에 보관한다.
+    session.setAttribute("loginUser", loginInfo);
     return "redirect:/jsp/deptSrch.jsp";
   }
 
