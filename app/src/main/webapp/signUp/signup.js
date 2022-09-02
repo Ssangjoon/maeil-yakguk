@@ -1,48 +1,56 @@
 $(document).ready(function(){
-	// 1) URL에서 쿼리스트링(query string)을 추출한다.
-	var arr = location.href.split("?");
+	// 쿼리스트링(query string)을 추출한다.
+	const arr = location.href.split("?");
 	
 	if (arr.length > 1) {
 	  alert("이미 존재하는 이메일(아이디)입니다.")
 	}
 })
-//document.querySelector("form[name=signup]").onsubmit = function() {
 
-var xEmail = document.querySelector("input[name=email]");
-var xPassword = document.querySelector("input[name=password]");
-var xPasswordCheck = document.querySelector("input[name=passwordCheck]");
-var xName = document.querySelector("input[name=name]");
-var xTel = document.querySelector("input[name=tel]");
-var xPostNo = document.querySelector("input[name=postNo]");
-var xRoadNameAddress = document.querySelector("input[name=roadNameAddress]");
-var xBaseAddress = document.querySelector("input[name=baseAddress]");
-var xAddress = document.querySelector("input[name=address]");
+const xEmail = document.querySelector("input[name=email]");
+const xPassword = document.querySelector("input[name=password]");
+const xPasswordCheck = document.querySelector("input[name=passwordCheck]");
+const xName = document.querySelector("input[name=name]");
+const xTel = document.querySelector("input[name=tel]");
+const xPostNo = document.querySelector("input[name=postNo]");
+const xRoadNameAddress = document.querySelector("input[name=roadNameAddress]");
+const xBaseAddress = document.querySelector("input[name=baseAddress]");
+const xAddress = document.querySelector("input[name=address]");
 
-var validTargets = [xEmail, xPassword, xPasswordCheck, xName, xTel, xPostNo, xRoadNameAddress, xBaseAddress, xAddress];
-
-// xEmail.value === ''
+const validTargets = [xEmail, xPassword, xPasswordCheck, xName, xTel, xPostNo, xRoadNameAddress, xBaseAddress, xAddress];
     
-    
+// 회원가입 유효성 검증
 $('form').on('submit', function(e) {
-    var emailTest = xEmail.value
-    var pwdTest = xPassword.value
-    var pwdCheckTest = xPasswordCheck.value
-    var nameTest = xName.value;
-    var telTest = xTel.value;
-    var RNATest = xRoadNameAddress.value;
-    var BATest = xBaseAddress.value;
+    const emailTest = xEmail.value
+    const pwdTest = xPassword.value
+    const pwdCheckTest = xPasswordCheck.value
+    const nameTest = xName.value;
+    const telTest = xTel.value;
+    const RNATest = xRoadNameAddress.value;
+    const BATest = xBaseAddress.value;
 
-    // var regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
-    var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
-    var strongRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,12}$/;
-    var regName = /^[가-힣]{2,4}|[a-zA-Z]{2,10}\s[a-zA-Z]{2,10}$/; // "|"를 사용
-    var regRoadAddress = /(([가-힣A-Za-z·\d~\-\.]{2,}(로|길).[\d]+)|([가-힣A-Za-z·\d~\-\.]+(읍|동)\s)[\d]+)/
-    var regBaseAddress = /(([가-힣]+(\\d{1,5}|\\d{1,5}(,|.)\\d{1,5}|)+(읍|면|동|가|리))(^구|)((\\d{1,5}(~|-)\\d{1,5}|\\d{1,5})(가|리|)|))([ ](산(\\d{1,5}(~|-)\\d{1,5}|\\d{1,5}))|)|$/
+    const regEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+    const regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+    const strongRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,12}$/;
+    const regName = /^[가-힣]{2,4}|[a-zA-Z]{2,10}\s[a-zA-Z]{2,10}$/; // "|"를 사용
+    const regRoadAddress = /(([가-힣A-Za-z·\d~\-\.]{2,}(로|길).[\d]+)|([가-힣A-Za-z·\d~\-\.]+(읍|동)\s)[\d]+)/
+    const regBaseAddress = /(([가-힣]+(\\d{1,5}|\\d{1,5}(,|.)\\d{1,5}|)+(읍|면|동|가|리))(^구|)((\\d{1,5}(~|-)\\d{1,5}|\\d{1,5})(가|리|)|))([ ](산(\\d{1,5}(~|-)\\d{1,5}|\\d{1,5}))|)|$/
+    let isValid = true;
 
-    // if (regEmail.test(emailTest) !== true) {
-    //     alert('올바른 이메일 형식으로 입력해주세요');
-    //     return false;
-    // }
+    validTargets.forEach(target => {
+        if (target.value == '') {
+            isValid = false;
+        }
+    });
+    if (isValid === false) {
+        alert("모든 항목을 기재해주세요")
+        return false;
+    }
+
+    if (regEmail.test(emailTest) !== true) {
+        alert('올바른 이메일 형식으로 입력해주세요');
+        return false;
+    }
 
     if (strongRegex.test(pwdTest) !== true) {
         alert("최소 하나의 문자, 숫자, 특수문자를 조합해주세요.\n8자 이상 12자 이하의 비밀번호로 작성해주세요")
@@ -77,7 +85,7 @@ $('form').on('submit', function(e) {
     
 
     
-
+// 우편 api
 function searchAddress() {
 	new daum.Postcode({
 		oncomplete: function(data) {

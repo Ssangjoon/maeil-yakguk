@@ -40,7 +40,7 @@ public class MemberController {
   }
 
   @RequestMapping(value = "loginCheck", method = RequestMethod.POST)
-  public Object loginCheck(Member member, HttpServletRequest request, HttpServletResponse response, Model model, HttpSession session) {
+  public Object loginCheck(Member member, HttpServletRequest request, HttpServletResponse response, HttpSession session) {
     log.info("로그인 체크");
     String email = request.getParameter("email");
     String remember = request.getParameter("remember");
@@ -62,7 +62,7 @@ public class MemberController {
     // 로그인이 성공하면,
     // 다른 요청을 처리할 때 로그인 회원의 정보를 사용할 있도록 세션에 보관한다.
     session.setAttribute("loginUser", loginInfo);
-    return "redirect:/jsp/deptSrch.jsp";
+    return "redirect:/search/pharmacy.jsp";
   }
 
 
@@ -76,7 +76,7 @@ public class MemberController {
     }
     memberService.add(member);
     log.info("가입");
-    return "/login/login.jsp?rt=2";
+    return "redirect:/member/login?rt=2";
   }
 
   @RequestMapping(value = "find", method = RequestMethod.GET)
