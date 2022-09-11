@@ -10,45 +10,46 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-<div>
-    <!-- menu -->
-    <div id="quick-search-list">
-        <a href="">병원</a>
-        <a href="">약국</a>
-        <a href="">응급실</a>
+
+<!-- search menu -->
+<div id="wrapper">
+
+    <!-- region search button -->
+    <div id="btn-wrap">
+        <button id="region-srch-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">지역으로 검색해 보세요.</button>
     </div>
 
-    <!-- search menu -->
-    <div id="wrapper">
-
-        <div id="btn-wrap">
-            <button id="region-srch-btn" type="button">지역으로 검색해 보세요.</button>
-        </div>
-
-        <div id="srch-bar">
-            <div id="region-bar" class="form-check">
-                <input type="radio" class="region btn-check" name="options" id="option1" autocomplete="off" checked>
-                <label class="btn btn-secondary" for="option1">서울</label>
-                <input type="radio" class="region btn-check" name="options" id="option2" autocomplete="off">
-                <label class="btn btn-secondary" for="option2">인천</label>
-                <input type="radio" class="region btn-check" name="options" id="option3" autocomplete="off">
-                <label class="btn btn-secondary" for="option3">경기도</label>
-                <input type="radio" class="region btn-check" name="options" id="option4" autocomplete="off">
-                <label class="btn btn-secondary" for="option4">강원</label>
-                <input type="radio" class="region btn-check" name="options" id="option5" autocomplete="off">
-                <label class="btn btn-secondary" for="option5">충청남도</label>
-                <input type="radio" class="region btn-check" name="options" id="option6" autocomplete="off">
-                <label class="btn btn-secondary" for="option6">충청북도</label>
-                <input type="radio" class="region btn-check" name="options" id="option7" autocomplete="off">
-                <label class="btn btn-secondary" for="option7">경상남도</label>
-                <input type="radio" class="region btn-check" name="options" id="option8" autocomplete="off">
-                <label class="btn btn-secondary" for="option8">경상북도</label>
-                <input type="radio" class="region btn-check" name="options" id="option9" autocomplete="off">
-                <label class="btn btn-secondary" for="option9">전라남도</label>
-                <input type="radio" class="region btn-check" name="options" id="option10" autocomplete="off">
-                <label class="btn btn-secondary" for="option10">전라북도</label>
-                <input type="radio" class="region btn-check" name="options" id="option11" autocomplete="off">
-                <label class="btn btn-secondary" for="option11">제주도</label>
+    <!-- offcanvas menu -->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+        <div id="offcanvas-body">
+            <div id="region-wrapper" class="">
+                <h5>지역</h5>
+                <div id="region-bar" class="form-check">
+                    <input type="radio" class="region btn-check" name="options" id="option1" autocomplete="off" checked>
+                    <label class="btn btn-secondary" for="option1">서울</label>
+                    <input type="radio" class="region btn-check" name="options" id="option2" autocomplete="off">
+                    <label class="btn btn-secondary" for="option2">인천</label>
+                    <input type="radio" class="region btn-check" name="options" id="option3" autocomplete="off">
+                    <label class="btn btn-secondary" for="option3">경기도</label>
+                    <input type="radio" class="region btn-check" name="options" id="option4" autocomplete="off">
+                    <label class="btn btn-secondary" for="option4">강원</label>
+                    <input type="radio" class="region btn-check" name="options" id="option5" autocomplete="off">
+                    <label class="btn btn-secondary" for="option5">충청남도</label>
+                    <input type="radio" class="region btn-check" name="options" id="option6" autocomplete="off">
+                    <label class="btn btn-secondary" for="option6">충청북도</label>
+                    <input type="radio" class="region btn-check" name="options" id="option7" autocomplete="off">
+                    <label class="btn btn-secondary" for="option7">경상남도</label>
+                    <input type="radio" class="region btn-check" name="options" id="option8" autocomplete="off">
+                    <label class="btn btn-secondary" for="option8">경상북도</label>
+                    <input type="radio" class="region btn-check" name="options" id="option9" autocomplete="off">
+                    <label class="btn btn-secondary" for="option9">전라남도</label>
+                    <input type="radio" class="region btn-check" name="options" id="option10" autocomplete="off">
+                    <label class="btn btn-secondary" for="option10">전라북도</label>
+                    <input type="radio" class="region btn-check" name="options" id="option11" autocomplete="off">
+                    <label class="btn btn-secondary" for="option11">제주도</label>
+                    <input type="radio" class="region btn-check" name="options" id="option12" autocomplete="off">
+                    <label class="btn btn-secondary" for="option12">세종</label>
+                </div>
             </div>
             <div id="city-bar" class="form-check">
                 <input type="radio" class="region btn-check" name="options" id="option1" autocomplete="off" checked>
@@ -102,9 +103,6 @@
                 <input type="radio" class="region btn-check" name="options" id="option11" autocomplete="off">
                 <label class="btn btn-secondary" for="option11">강동구</label>
             </div>
-            <div>
-                <button onclick="closeMenu()">X</button>
-            </div>
         </div>
     </div>
 </div>
@@ -114,7 +112,7 @@
 <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <!-- jquery -->
 <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script>
+<!-- <script>
 "use strict"
 
 // 지역 선택 창 열기
@@ -127,6 +125,6 @@ $("#region-srch-btn").on("click", function () {
 function closeMenu() {
     $("#srch-bar").css('display', 'none');
 }
-</script>
+</script> -->
 </body>
 </html>
